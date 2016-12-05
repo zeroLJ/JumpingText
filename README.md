@@ -1,6 +1,6 @@
 # JumpingText
  
- 复制JumpingBeans和JumpingBenansSpan到自己即可使用.
+ 复制JumpingBeans和JumpingBenansSpan到自己项目即可使用.
  
 // Append jumping dots
 
