@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,10 +8,40 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="example.com.zero.jumpingtext.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="@string/label_1"
+        android:layout_marginBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/jumping_text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message"
+        android:layout_marginBottom="24dp"
+        android:textAppearance="@style/TextAppearance.DemoText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <!-- This TextView has 8dp of top padding to avoid clipping the ascenders
+         of the first word when animating - also, the TextView above this doesn't
+         have any margin, to create the same spacing that we have between the
+         first couple of TextViews. -->
+    <TextView
+        android:id="@+id/jumping_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message"
+        android:paddingTop="8dp"
+        android:textAppearance="@style/TextAppearance.DemoText" />
+
+</LinearLayout>
